@@ -1,5 +1,5 @@
-var inputNum = prompt("Please enter five numbers separated by spaces (from 1-48), no duplicates:", "");
-var inputBall = prompt("Please enter a Lucky Ball number (from 1-18):", "");
+var inputNum = prompt("Enter five numbers separated by spaces (1-48), no duplicates and in ascending order: ", "");
+var inputBall = prompt("Enter a Lucky Ball number (from 1-18):", "");
 
 //function to randomize numbers
 var randomNumber = function(min, max) {
