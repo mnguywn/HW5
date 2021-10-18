@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <meta charset="utf-8"/>
+        <meta charset="utf-8"/>
         <script src="lottery.js"></script>
         <link rel="stylesheet" href="stylesheet.css">
     <title>Lottery Simulator</title>
@@ -9,11 +9,12 @@
     <body>
         <h1><em>Lucky for Life</em></h1>
         <h3>Come test your luck!</h3>
-        <script>
+        <script lang = "javascript">
             //randomized numbers + lucky ball
             document.write("Winning Numbers: ");
             for (var i = 0; i < lotNums.length; i++) {
-            document.writeln(+ lotNums[i]+ " ");
+                sortLotNums();
+                document.writeln(+ lotNums[i]+ " ");
             };
             document.write("<br> Winning Lucky Ball Number: " + luckyNum);
 
@@ -27,44 +28,11 @@
             //displays if lucky ball matches
             if (inputBall == luckyNum) {
                 document.write("<br>Lucky Ball matches!<br>");
+                winnings();
             }
             else {
                 document.write("<br>Lucky Ball does not match ): <br> <br>");
-            }
-
-            //loop for winnings
-            if((count == 5) && (inputBall == luckyNum)) {
-                document.write("You win: $7000 a week for LIFE");
-            }
-            else if(count == 5) {
-                document.write("You win: $25000 a year for LIFE");
-            }
-            else if((count == 4) && (inputBall == luckyNum)) {
-                document.write("You win: $5000");
-            }
-            else if(count == 4){
-                document.write("You win: $200");
-            }
-            else if((count==3) && (inputBall == luckyNum)) {
-                document.write("You Win: $150");
-            }
-            else if(count==3) {
-                document.write("You win: $20");
-            }
-            else if((count==2) && (inputBall == luckyNum)) {
-                document.write("You win: $25");
-            }
-            else if(count==2) {
-                document.write("You win: $3");
-            }
-            else if((count==1) && (inputBall == luckyNum)) {
-                document.write("You win: $6");
-            }
-            else if((inputBall == luckyNum)) {
-                document.write("You win: $4");
-            }
-            else{
-                document.write("I guess you're just not lucky. You win nothing. <br>");
+                winnings();
             }
         </script>
     </body>
